@@ -7,21 +7,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Chinthaka Godawita">
   <title>Fishburners Trial | Bee Analytics</title>
-  <link rel="stylesheet" type="text/css" href="/vendor/bower/normalize-css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="vendor/bower/normalize-css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700,600' rel='stylesheet' type='text/css'>
   <!-- HTML5 shim for IE8 support of HTML5 elements. -->
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
     <script>window.html5 || document.write('<script src="vendor/html5shiv/html5shiv.js">\x3C/script>')</script>
   <![endif]-->
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+  typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+  b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+  mixpanel.init("721cab172d5cf6786f216cdb84a8d43c");</script><!-- end Mixpanel -->
 </head>
 <body>
+  <!-- Begin GA tracking. -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-44681725-2', 'beeanalytics.com.au');
+    ga('send', 'pageview');
+  </script>
+  <!-- /. End GA tracking. -->
+
   <div class="container">
     <header>
       <div class="page-header">
         <a href="http://www.beeanalytics.com" title="Home">
-          <img src="/images/logo.png" width="300" height="61" alt="Bee Analytics logo">
+          <img src="images/logo.png" width="300" height="61" alt="Bee Analytics logo">
         </a>
         <span class="slogan">
           Spatial Behaviour Analytics
@@ -37,7 +54,7 @@
       <div class="inner">
         <h2>What's going on?</h2>
         <p>Bee Analytics is running a trial at Fishburners!</p>
-        <p>As a participant, you will be helping Fishburners better understand the facilities usage within our community. Think of it as lending a hand.</p>
+        <p>You're helping Fishburners better understand the facilities usage within our community. Think of it as lending a hand.</p>
       </div>
     </section>
     <section class="row sub-hero">
@@ -45,7 +62,7 @@
         <h2>But tell me, <strong>how does it work?</strong></h2>
         <p>Over the course of the trial, our <strong>Bee Stations</strong> will detect anonymous public wifi signals in the building. This data will be correlated with duration, time and location to build usage patterns of the Fishburner spaces and facilities.</p>
         <p><strong>Not to worry!</strong> We only use <strong>anonymised data</strong> and will not be able to identify or access any private information on your phone.</p>
-        <p>Though we guarantee anonymity and security, we understand this is not for everyone. You can <a href="#">opt-out of the trial</a> at any time.</p>
+        <p>Though we guarantee anonymity and security, we understand this is not for everyone. You can <a class="opt-out" href="#">opt-out of the trial</a> at any time.</p>
         </p>
       </div>
     </section>
@@ -75,6 +92,7 @@
   <!-- Defer scripts. -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="vendor/jquery/jquery.min.js">\x3C/script>')</script>
-  <!-- <script src="/js/main.js"></script> -->
+  <script src="js/mixpanel_scroll_tracker.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
