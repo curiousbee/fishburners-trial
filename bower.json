@@ -1,0 +1,24 @@
+{
+  "name": "BeeAnalytics: Fishburners opt-out",
+  "version": "0.1.0",
+  "authors": [
+    "Chinthaka Godawita <chin@curiousbee.com.au>"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.beeanalytics.com.au/fish",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.0.3",
+    "bourbon": "~3.1.8",
+    "normalize-css": "~3.0.0",
+    "html5shiv": "3.7",
+    "neat": "~1.5.0"
+  }
+}

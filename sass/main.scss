@@ -1,0 +1,152 @@
+@import "../vendor/bower/bourbon/app/assets/stylesheets/bourbon";
+@import "grid_settings";
+@import "../vendor/bower/neat/app/assets/stylesheets/neat";
+
+/**
+ * Mixins.
+ */
+@mixin hero-text() {
+  letter-spacing: em(-1);
+  font-weight: 300;
+}
+
+/**
+ * Outer elements.
+ */
+body {
+  background: #eee;
+  font-family: "Open Sans", $helvetica;
+}
+
+/**
+ * Frames.
+ */
+div.container {
+  @include outer-container;
+}
+
+section.row, header, footer {
+  @include span-columns(12);
+  background: #fff;
+
+  > div {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+section.row {
+  $padding: 110;
+  padding: em($padding) 0 em($padding) 0;
+}
+
+/**
+ * Page header.
+ */
+div.page-header {
+  padding: em(40) 0 em(40) 0;
+
+  a {
+    // float: left;
+    margin-right: 10px;
+  }
+
+  span.slogan {
+    display: block;
+    margin-left: 30px;
+    // float: left;
+    // margin-top: em(18);
+    font-size: em(18);
+
+    @include media($tablet) {
+      margin-top: 0;
+      // margin-left: em(3);
+    }
+  }
+}
+
+/**
+ * Heroes.
+ */
+section.hero {
+  background: #f38b3f;
+  color: #fff;
+  $padding: em(30);
+  padding: $padding 0 $padding 0;
+
+  h1 {
+    font-size: em(75);
+    text-shadow: 0px 2px 2px #939dab;
+    @include hero-text;
+
+    @include media($tablet) {
+      font-size: em(55);
+    }
+    @include media($mobile) {
+      font-size: em(40);
+    }
+  }
+}
+
+section.sub-hero {
+  background: #e1e1e1;
+
+  h2 {
+    color: #ee5b1f;
+  }
+}
+
+section.sub-hero.newsletter {
+  background: #a8143d;
+
+  h2 {
+    color: #eee;
+  }
+
+  p {
+    color: #e8e8e8;
+  }
+}
+
+/**
+ * Typography.
+ */
+.row h2 {
+  color: #373737;
+  @include hero-text;
+  font-size: em(60);
+  margin: 0;
+}
+
+.row p {
+  margin-bottom: 0;
+  color: #343434;
+  font-size: em(22);
+}
+
+/**
+ * Links
+ */
+a {
+  $a_color: #355fd6;
+  color: $a_color;
+
+
+  &:visited {
+    color: $a_color;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #6d97f7;
+  }
+}
+
+/**
+ * Footer.
+ */
+footer {
+  background: #4e4e4e;
+  color: #eee;
+  font-size: em(12);
+}
