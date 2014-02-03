@@ -4,6 +4,7 @@ vendor
 
 # SASS
 .sass-cache
+css
 
 # Sublime
 *.sublime*
