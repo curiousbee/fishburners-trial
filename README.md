@@ -10,6 +10,8 @@ Simply clone this repository and run:
 grunt
 ```
 
+This should start a server up at `http://localhost:4000`.
+
 ## Building
 Build is handled through Grunt as well, just run:
 ```bash
