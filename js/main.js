@@ -1,16 +1,16 @@
-(function ($, mixpanel, _gaq) {
+(function ($, mixpanel, ga) {
   var active_timer;
 
   $(document).ready(function () {
     // Track opt-out.
     $('a.opt-out').click(function (event) {
-      _gaq.push(['_trackEvent', 'Fishburners Trial', 'Opted out', 'Fishburners Trial']);
+      ga.push(['_trackEvent', 'Fishburners Trial', 'Opted out', 'Fishburners Trial']);
       mixpanel.track('Opted out of Fishburners trial');
     });
 
     // Track subscribe.
     $('#mc-embedded-subscribe').click(function (event) {
-      _gaq.push(['_trackEvent', 'Newsletter', 'Subscribed', 'Fishburners Trial Newsletter']);
+      ga.push(['_trackEvent', 'Newsletter', 'Subscribed', 'Fishburners Trial Newsletter']);
       mixpanel.track('Subscribed to Fishburners trial info')
     });
 
@@ -26,4 +26,4 @@
     });
 
   });
-})(jQuery, mixpanel, _gaq);
+})(jQuery, mixpanel, ga);
