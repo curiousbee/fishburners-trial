@@ -16,12 +16,16 @@
 
     // Running count of active users @ Fish.
     var $count_wrapper = $('.hero span.count');
-    $.doTimeout(5000, function () {
+    var update_count = function () {
       $.get('http://www.beeanalytics.com.au/api/web/index.php/v1/fish-active', function (data) {
         $count_wrapper.html(data.count);
       });
-
-      // Poll every five seconds.
+    };
+    // Update on load.
+    update_count();
+    // Poll every five seconds.
+    $.doTimeout(5000, function () {
+      update_count();
       return true;
     });
 
