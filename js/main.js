@@ -15,10 +15,10 @@
     });
 
     // Running count of active users @ Fish.
+    var $count_wrapper = $('.hero span.count');
     $.doTimeout(5000, function () {
       $.get('http://www.beeanalytics.com.au/api/web/index.php/v1/fish-active', function (data) {
-        console.log("hola datevid");
-        console.log(data);
+        $count_wrapper.html(data.count);
       });
 
       // Poll every five seconds.
