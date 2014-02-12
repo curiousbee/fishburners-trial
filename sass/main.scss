@@ -109,6 +109,34 @@ section.sub-hero.newsletter {
 }
 
 /**
+ * Countdown chart.
+ */
+.count-chart {
+  display: inline-block;
+  vertical-align: top;
+  height: 200px;
+  width: 200px;
+  padding-top: 60px;
+  // padding-left: 60px;
+  position: relative;
+  box-sizing: border-box;
+  font-weight: 300;
+  text-align: center;
+
+  span {
+    font-size: 2em;
+    font-weight: normal;
+    display: block;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/**
  * Typography.
  */
 .row h2 {
